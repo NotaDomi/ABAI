@@ -4,7 +4,8 @@ from src.local_search import *
 problem = EightQueensProblem()
 pool = list(i for i in range(0, 8))
 
-searches = [HillClimbing(problem=problem), SimulatedAnnealing(problem=problem)]
+searches = [HillClimbing(problem=problem), SimulatedAnnealing(problem=problem),
+            GeneticSearch(problem=problem, gene_pool=pool)]
 for search in searches:
     # search = GeneticSearch(problem=problem, gene_pool=pool)
 
