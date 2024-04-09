@@ -33,7 +33,4 @@ class GraphSearch:
                 if node is None:
                     return 'Fail', []
             else:
-                if self.problem.goal_test(node.state):
-                    return 'Ok', node
-                else:
-                    return 'Fail', []
+                return 'Fail', []
