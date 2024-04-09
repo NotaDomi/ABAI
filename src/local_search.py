@@ -73,7 +73,7 @@ class GeneticSearch:  # with sequence of numbers/characters
         return tuple(list(parent_a[:split]) + list(parent_b[split:]))
 
     def mutation(self, state):
-        if random.uniform(0, 1) > self.p_mutations or not self.gene_pool:
+        if random.uniform(0, 1) > self.p_mutations or self.gene_pool is None:
             return state
         new_state = list(state)
         new_state[random.randint(0, len(state) - 1)] = random.choice(self.gene_pool)

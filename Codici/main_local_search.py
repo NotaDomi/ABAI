@@ -5,7 +5,7 @@ problem = EightQueensProblem()
 pool = list(i for i in range(0, 8))
 
 searches = [HillClimbing(problem=problem), SimulatedAnnealing(problem=problem),
-            GeneticSearch(problem=problem, gene_pool=pool)]
+            GeneticSearch(problem=problem, p_mutation=0.1, population=100)]
 for search in searches:
     # search = GeneticSearch(problem=problem, gene_pool=pool)
 
