@@ -1,4 +1,4 @@
-from csp.constraints import DifferentValues
+from csp.constraints import *
 
 
 class CSP:
